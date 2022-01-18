@@ -9,6 +9,7 @@ const manager = new TasksManager();
 
 const updateTask = (event, index, focus = false) => {
   if (event.key === 'Enter' || focus) {
+    // console.log("test");
     manager.updateTask(
       index,
       selector(`.task_${index}`).value,
@@ -26,6 +27,7 @@ const updateStatus = (index) => {
 };
 
 const display = () => {
+  console.log('HI');
   DisplayManager.reset(selector('.tasks'));
 
   manager
